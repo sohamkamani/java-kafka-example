@@ -69,7 +69,7 @@ public class App {
         Properties props = new Properties();
         props.setProperty("bootstrap.servers", BOOTSTRAP_SERVERS);
         // The group ID is a unique identified for each consumer group
-        props.setProperty("group.id", "my-group-id4");
+        props.setProperty("group.id", "my-group-id");
         // Since our producer uses a string serializer, we need to use the corresponding
         // deserializer
         props.setProperty("key.deserializer",
@@ -83,7 +83,6 @@ public class App {
         props.setProperty("auto.commit.interval.ms", "1000");
         props.setProperty("fetch.min.bytes", "150");
         props.setProperty("fetch.max.wait.ms", "2500");
-        props.setProperty("auto.offset.reset", "earliest");
 
         // Since we need to close our consumer, we can use the try-with-resources statement to
         // create it
